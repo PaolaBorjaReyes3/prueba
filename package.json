@@ -1,0 +1,26 @@
+{
+  "name": "node_modelo_capas",
+  "version": "1.0.0",
+  "description": "patrón de arquitectura por capas usando NODEJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salomonSanchez/NODE_MODELO_CAPAS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salomonSanchez/NODE_MODELO_CAPAS/issues"
+  },
+  "homepage": "https://github.com/salomonSanchez/NODE_MODELO_CAPAS#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7"
+  },
+  "keywords": []
+}

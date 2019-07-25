@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LIBROS PRESTADOS</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+</head>
+  <body>
+      <div>
+            <table>
+                    <tr>
+                        <th>id</th>
+                        <th>nombre</th>
+                        <th>fecha_prestamo</th>
+                        <th>fecha_entrega</th>
+                    </tr>
+                    <% if (Data) {%>
+                            <% for(var i=0; i<Data.length; i++) { %>
+                                <tr>
+                                    <td><%=Data[i].id%></td>
+                                    <td><%=Data[i].nombre%></td>
+                                    <td><%=Data[i].precio%></td>
+                                    <td><%=Data[i].fecha_prestamo%></td>
+                                    <td><%=Data[i].fecha_entrega%></td>
+                                </tr>
+                                
+                            <%}%>
+                        <% } %>
+            </table>
+      </div>
+
+      <div>
+            <form action="/update/<%= Data.id %>" method="POST">
+                <table>
+                    <tbody>                       
+                        <tr>
+                            <td>Name:<%= Data.nombre%> </td>
+                            <td><input type="text" name="name" value="<%= Data.nombre%>"  required></td>
+                        </tr>
+                        <tr>
+                            <td>Price: <%= Data.fecha_prestamo%></td>
+                            <td><input type="text" name="fecha_prestamo"  value="<%= Data.fecha_prestamo%>" required/></td>
+                        </tr>
+                        <tr>
+                            <td>Price: <%= Data.fecha_entrega%></td>
+                            <td><input type="text" name="fecha_entrega"  value="<%= Data.fecha_entrega%>" required/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Save" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+      </div>
+        
+  </body>
+</html>
