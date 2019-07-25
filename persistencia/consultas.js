@@ -43,8 +43,7 @@ exports.editar = function(req, res,sql,ID){
 	});
   }
 
- 
-  exports.actualizar = function(req, res,sql,data,ID){
+   exports.actualizar = function(req, res,sql,data,ID){
 	dbConection.query(sql,[data,ID],function(err,resul){
 		if(!err){
 			home.direccionar(res);

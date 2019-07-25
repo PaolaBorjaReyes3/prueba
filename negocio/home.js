@@ -49,7 +49,7 @@ exports.datosEditados = function (res,datos){
 exports.actualiza = function(req, res){
 	const data = req.body;
 	var ID  = req.params.id;
-	var sql = 'UPDATE producto set ? where id = ?'
+	var sql = 'UPDATE libro set ? where id = ?'
 	modelo.actualizar(req, res,sql,data, ID);
 }
 
